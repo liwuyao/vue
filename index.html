@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>youpinghui</title>
+   	<style type="text/css">
+   		html,body{height: 100%;width: 100%;}
+   		*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+   	</style>
+   <script>
+    	(function (doc, win) {
+            var docEl = doc.documentElement,
+           // orientationchange 事件 用来监听手机屏幕的反转
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;//(window.innerWidth);UC 或者QQ 安卓4.0 以下原生浏览器下面是没有
+              if (!clientWidth) return;     
+               docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+            };
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          //DOMContentLoaded dom 加载完成，onload 有什么区别 dom css js OK 才执行的
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="static/font/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="static/swiper-3.4.2.min (4).css"/>
+   	<script src="static/swiper-3.4.2.min (5).js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
